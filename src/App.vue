@@ -1,20 +1,20 @@
 <template lang="pug">
-div#app.min-h-screen.bg-gradient-to-br.from-blue-50.to-indigo-100
-  header.bg-white.shadow-sm
-    nav.max-w-7xl.mx-auto.px-4.sm:px-6.lg:px-8
-      div.flex.justify-between.h-16
-        div.flex.items-center
-          h1.text-2xl.font-bold.text-gray-900 Y&A Story
-        div.flex.items-center.space-x-4
-          a.text-gray-500.hover:text-gray-700.px-3.py-2.rounded-md.text-sm.font-medium(href="#") Home
-          a.text-gray-500.hover:text-gray-700.px-3.py-2.rounded-md.text-sm.font-medium(href="#") About
-          a.text-gray-500.hover:text-gray-700.px-3.py-2.rounded-md.text-sm.font-medium(href="#") Contact
+div#app(class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100")
+  header(class="bg-white shadow-sm")
+    nav(class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8")
+      div(class="flex justify-between h-16")
+        div(class="flex items-center")
+          h1(class="text-2xl font-bold text-gray-900") Y&A Story
+        div(class="flex items-center space-x-4")
+          a(href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium") Home
+          a(href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium") About
+          a(href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium") Contact
 
-  main.max-w-7xl.mx-auto.py-6.sm:px-6.lg:px-8
-    div.px-4.py-6.sm:px-0
-      WelcomeCard(:message="welcomeMessage" :count="count")
+  main(class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8")
+    div(class="px-4 py-6 sm:px-0")
+      WelcomeCard(:message="welcomeMessage" :count="count" @increment="incrementCount")
       
-      div.mt-8.grid.grid-cols-1.gap-6.sm:grid-cols-2.lg:grid-cols-3
+      div(class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3")
         FeatureCard(
           v-for="feature in features"
           :key="feature.id"
@@ -23,9 +23,9 @@ div#app.min-h-screen.bg-gradient-to-br.from-blue-50.to-indigo-100
           :icon="feature.icon"
         )
 
-  footer.bg-white.border-t.border-gray-200.mt-auto
-    div.max-w-7xl.mx-auto.py-4.px-4.sm:px-6.lg:px-8
-      p.text-center.text-sm.text-gray-500 © 2024 Y&A Story. Built with Vue 3, TypeScript, Pug, Sass, and Tailwind CSS.
+  footer(class="bg-white border-t border-gray-200 mt-auto")
+    div(class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8")
+      p(class="text-center text-sm text-gray-500") © 2024 Y&A Story. Built with Vue 3, TypeScript, Pug, Sass, and Tailwind CSS.
 </template>
 
 <script setup lang="ts">

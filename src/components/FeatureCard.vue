@@ -1,12 +1,12 @@
 <template lang="pug">
-div.bg-white.overflow-hidden.shadow.rounded-lg.hover:shadow-lg.transition-shadow.duration-300
-  div.px-4.py-5.sm:p-6
-    div.flex.items-center
-      div.flex-shrink-0
-        span.text-2xl {{ icon }}
-      div.ml-4
-        h3.text-lg.leading-6.font-medium.text-gray-900 {{ title }}
-        p.mt-2.text-sm.text-gray-500 {{ description }}
+div(class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300")
+  div(class="px-4 py-5 sm:p-6")
+    div(class="flex items-center")
+      div(class="flex-shrink-0")
+        span(class="text-2xl") {{ icon }}
+      div(class="ml-4")
+        h3(class="text-lg leading-6 font-medium text-gray-900") {{ title }}
+        p(class="mt-2 text-sm text-gray-500") {{ description }}
 </template>
 
 <script setup lang="ts">

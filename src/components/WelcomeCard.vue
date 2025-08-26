@@ -1,21 +1,22 @@
 <template lang="pug">
-div.bg-white.overflow-hidden.shadow.rounded-lg
-  div.px-4.py-5.sm:p-6
-    div.flex.items-center
-      div.flex-shrink-0
-        div.flex.items-center.justify-center.h-8.w-8.rounded-md.bg-indigo-500.text-white
-          span.text-lg 👋
-      div.ml-5.w-0.flex-1
+div(class="bg-white overflow-hidden shadow rounded-lg")
+  div(class="px-4 py-5 sm:p-6")
+    div(class="flex items-center")
+      div(class="flex-shrink-0")
+        div(class="flex items-center justify-center h-8 w-8 rounded-md bg-indigo-500 text-white")
+          span(class="text-lg") 👋
+      div(class="ml-5 w-0 flex-1")
         dl
-          dt.text-sm.font-medium.text-gray-500.truncate Welcome Message
-          dd.text-lg.font-medium.text-gray-900 {{ message }}
+          dt(class="text-sm font-medium text-gray-500 truncate") Welcome Message
+          dd(class="text-lg font-medium text-gray-900") {{ message }}
     
-    div.mt-4
-      div.flex.items-center.justify-between
-        div.text-sm.text-gray-500 Click count: {{ count }}
-        button.inline-flex.items-center.px-3.py-2.border.border-transparent.text-sm.leading-4.font-medium.rounded-md.text-indigo-700.bg-indigo-100.hover:bg-indigo-200.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-indigo-500(
+    div(class="mt-4")
+      div(class="flex items-center justify-between")
+        div(class="text-sm text-gray-500") Click count: {{ count }}
+        button(
           @click="incrementCounter"
           type="button"
+          class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         ) Click me!
 </template>
 
